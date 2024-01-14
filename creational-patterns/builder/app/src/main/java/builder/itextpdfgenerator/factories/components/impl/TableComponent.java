@@ -1,6 +1,6 @@
-package builder.pdfgenerator.factories.components.impl;
+package builder.itextpdfgenerator.factories.components.impl;
 
-import builder.pdfgenerator.factories.components.Component;
+import builder.itextpdfgenerator.factories.components.Component;
 import com.itextpdf.layout.element.Table;
 
 public class TableComponent implements Component<Integer> {

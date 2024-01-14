@@ -1,4 +1,4 @@
-package builder.pdfgenerator.factories.components;
+package builder.itextpdfgenerator.factories.components;
 
 import com.itextpdf.layout.element.BlockElement;
 

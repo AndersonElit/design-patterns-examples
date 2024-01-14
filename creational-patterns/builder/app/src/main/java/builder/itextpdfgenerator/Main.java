@@ -1,4 +1,4 @@
-package builder.pdfgenerator;
+package builder.itextpdfgenerator;
 
 import java.io.IOException;
 
