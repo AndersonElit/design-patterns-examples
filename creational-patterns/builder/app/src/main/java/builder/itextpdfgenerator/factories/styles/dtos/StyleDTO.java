@@ -14,6 +14,10 @@ public class StyleDTO {
         this.color = builder.color;
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
+
     public String getLetterType() {
         return letterType;
     }
@@ -33,6 +37,10 @@ public class StyleDTO {
         private Color color;
 
         public Builder() {}
+
+        public static Builder newInstance() {
+            return new Builder();
+        }
 
         public Builder letterType(String letterType) {
             this.letterType = letterType;
