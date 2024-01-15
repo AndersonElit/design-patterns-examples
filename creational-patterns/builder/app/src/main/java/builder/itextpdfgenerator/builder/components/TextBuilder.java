@@ -5,10 +5,11 @@ import builder.itextpdfgenerator.factories.components.impl.ParagraphComponent;
 import builder.itextpdfgenerator.factories.styles.factory.StylesFactory;
 import com.itextpdf.layout.element.Paragraph;
 
-public class TitleBuilder {
+public class TextBuilder {
+
     private final Paragraph paragraph;
 
-    private TitleBuilder(Builder builder) {
+    public TextBuilder(Builder builder) {
         this.paragraph = builder.paragraph;
     }
 
@@ -21,20 +22,21 @@ public class TitleBuilder {
     }
 
     public static class Builder {
+
         private StylesFactory stylesFactory;
         private Paragraph paragraph;
 
         public Builder() {}
 
-        public Builder title(String title) {
+        public Builder text(String title) {
             ComponentsFactory componentsFactory = () -> "paragraph";
             ParagraphComponent component = (ParagraphComponent) componentsFactory.getComponent();
             this.paragraph = component.get(title);
             return this;
         }
 
-        public TitleBuilder build() {
-            return new TitleBuilder(this);
+        public TextBuilder build() {
+            return new TextBuilder(this);
         }
 
     }
